@@ -1,7 +1,7 @@
 #root {
     --chat-background: #202020;
     --heading-color: #ffeaea;
-
+    
     --color: #2e2e2e;
     --chat-text-color: #ffffff;
     --chat-gradient: linear-gradient(294deg, rgb(44 44 44 / 85%) 0%, rgb(47 47 47) 100%);
@@ -9,60 +9,74 @@
     --chat-gradient: linear-gradient(180deg, rgba(96, 165, 250, 0.244) 0%, rgba(29, 79, 216, 0.283) 100%);
     --chat-gradient: linear-gradient(180deg, rgb(55 105 166 / 24%) 0%, rgb(53 50 74 / 18%) 100%);
     /* --chat-gradient: linear-gradient(180deg, rgb(96 165 250 / 4%) 0%, rgb(0 127 15 / 6%) 100%); */
-
+    
     --chat-input-option-color: #d6d6d6;
     --chat-input-option-color-hover: #a7a7a7;
     --chat-input-option-background: #414141;
-
-
+    
+    
     --textarea-border: #4c4c4c;
     --textarea-background: #2c2c2c;
-
+    
     --search-icon-color: #fff;
     --search-icon-bg: #2ea61d;
     --search-icon-bg-hover: #2c911f;
     --search-icon-bg-disabled: #2c911f4d;
-
+    
     --input-option-bg: #2c2c2c;
     --input-option-color: #ffffff;
-
+    
     --input-option-icon-bg: #f2f2f2;
     --input-option-icon-color: #3a3a3a;
-
+    
     --skeleton-icon-gradient: linear-gradient(transparent 50%, rgb(39, 49, 63) 50%) 0% 0% / 18px 144px, linear-gradient(rgb(143, 168, 138), rgba(15, 170, 24, 0.39)) 0% 0% / 100% 44px;
     --skeleton-text-gradient: linear-gradient(transparent 50%, rgb(39, 49, 63) 50%) 0% 0% / 18px 20px, linear-gradient(rgb(143, 168, 138), rgba(15, 170, 24, 0.39)) 0% 0% / 100% 30px;
 }
-
+/* 
 [data-theme=light] {
     --chat-background: #fff;
     --heading-color: #333333;
-
+    
     --color: #ffffff;
     --chat-text-color: #2e2e2e;
     --chat-gradient: rgb(240, 250, 249);
-
+    
     --chat-input-option-color: #4a4a4a;
     --chat-input-option-color-hover: #6a6a6a;
     --chat-input-option-background: #e0e0e0;
-
+    
     --textarea-border: #c0c0c0;
     --textarea-background: #f5f5f5;
-
+    
     --search-icon-color: #ffffff;
     --search-icon-bg: #2ea61d;
-
+    
     --input-option-bg: #f0f0f0;
     --input-option-color: #2e2e2e;
-
+    
     --input-option-icon-bg: #e0e0e0;
     --input-option-icon-color: #3a3a3a;
-}
+} */
 
 .chat-section {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    
+    box-sizing: border-box;
+    
+    color-scheme: light dark;
+
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     border-radius: 1.8rem;
     padding: .6rem;
-    width: 98%;
-    height: 612px;
     background-color: #fff;
     background-color: var(--chat-background);
     margin: 1rem;
@@ -71,9 +85,12 @@
     justify-content: center;
     flex-direction: column;
     justify-content: flex-end;
+
     position: relative;
     max-width: 600px;
     min-width: 270px;
+    width: 98%;
+    height: 612px;
 }
 
 .prompt-input {
@@ -193,26 +210,27 @@
     width: 100%;
     /* background-color: #3a3a3a; */
     scroll-behavior: smooth;
-    /* align-items: center; */
+    align-items: center;
     overflow-x: hidden;
+    text-align: center;
+    z-index: 998;
 }
 
 .chat-component-heading {
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-    color: #2e2e2e;
     color: var(--heading-color);
     margin: 0;
     width: 100%;
-    border-top-left-radius: 1.8rem;
-    border-top-right-radius: 1.8rem;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
     padding: .8rem 2rem;
     display: flex;
-    z-index: 3;
-    /* background-color: ; */
+    z-index: 999;
+    background: var(--text);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .chat-component-heading h3 {
@@ -354,6 +372,7 @@
     flex-direction: column;
     gap: 10px;
     cursor: crosshair;
+    width: 100%;
 }
 
 .floating-icons{

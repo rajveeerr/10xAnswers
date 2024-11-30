@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { useRecoilState, useSetRecoilState } from 'recoil'
-import '../ChatComponent.css'
 import 'highlight.js/styles/github-dark.css';
 import { v4 as uuidv4 } from 'uuid';
 import { questionFamily } from '../store/atoms/questionFamily';

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { useRecoilState ,useRecoilValue, useRecoilStateLoadable } from 'recoil'
-import '../ChatComponent.css'
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/github-dark.css';
@@ -45,6 +44,8 @@ export default function Chat(props){
     }
     
     if(currentAnswer.state==='hasError'){
+      console.log(currentAnswer.contents);
+      
       return <div style={{display: "flex",justifyContent:"center"}}>
         <div className='error chat-option' style={{display:"flex",justifyContent:"center",width:"max-content"}}>Some Error Occured While Generating Response</div>
       </div>
