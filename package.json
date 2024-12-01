@@ -1,37 +1,77 @@
 {
   "name": "10xanswers",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.10",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajveeerr/10xAnswers.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "src/components/answerComponent.jsx",
+    "src/styles/chatStyle.css",
+    "src/components/chatArea.jsx",
+    "src/components/heading.jsx",
+    "src/components/inputArea.jsx",
+    "src/components/onlineIndicator.jsx",
+    "src/components/questions.jsx",
+    "src/hooks/useOnline.js",
+    "src/store/atoms/allChats.js",
+    "src/store/atoms/answerFamily.js",
+    "src/store/atoms/questionFamily.js",
+    "src/store/atoms/attributesData.js",
+    "src/store/atoms/chatWindowState.js"
+  ],
   "scripts": {
     "dev": "vite",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "watch": "vitest"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
     "react-rnd": "^10.4.13",
     "react-syntax-highlighter": "^15.6.1",
     "recoil": "^0.7.7",
     "rehype-highlight": "^7.0.1",
     "remark-gfm": "^4.0.0",
-    "rnd": "^1.0.10",
     "uuid": "^11.0.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
     "@eslint/js": "^9.13.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.13.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^0.0.0",
+    "babel-preset-react": "^6.24.1",
+    "c8": "^10.1.2",
+    "css-loader": "^7.1.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.16.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
-    "vite": "^5.4.10"
+    "jsdom": "^25.0.1",
+    "react-test-renderer": "^18.3.1",
+    "style-loader": "^4.0.0",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.6"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

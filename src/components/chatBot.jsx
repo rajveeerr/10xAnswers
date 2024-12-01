@@ -1,17 +1,38 @@
-import '../styles/chatStyle.css'
+import './chatStyle.css'
 import 'highlight.js/styles/github-dark.css';
 import Input from './inputArea';
 import ChatArea from './chatArea';
 import Heading from './heading';
 import {useEffect } from 'react'
-import { useSetRecoilState } from 'recoil'
+import { RecoilRoot, useRecoilState, useSetRecoilState } from 'recoil'
 import { Rnd } from 'react-rnd'
 import { chatBotAttributes } from '../store/atoms/attributesData';
+import { chatWindowState } from '../store/atoms/chatWindowState';
 
-export default function ChatBot({backendUrl,geminiApi,prompt,botIcon,description,cta,draggable,title,
-  stylizeTitle,style,className,x,y,userIcon,theme}){
+export default function ChatBot({
+    backendUrl,
+    geminiApi,
+    prompt,
+    draggable,
+    x,
+    y,
+    title,
+    stylizeTitle,
+    description,
+    cta,
+    userIcon,
+    botIcon,
+    theme,
+    chatWindowStyle,
+    chatBotIconStyle,
+    chatComponentStyle,
+    chatWindowClassName,
+    chatBotIconClassName,
+    chatComponentClassName
+  }){
     
-    let setAttributeData=useSetRecoilState(chatBotAttributes)
+    // let setAttributeData=useSetRecoilState(chatBotAttributes)
+    // let [open,setWindowOpen]=useRecoilState(chatWindowState)
 
     useEffect(() => {
       if(!document.getElementById("font-awesome-script")) {
@@ -20,24 +41,34 @@ export default function ChatBot({backendUrl,geminiApi,prompt,botIcon,description
         script.id = "font-awesome-script";
         script.crossOrigin = "anonymous";
         document.body.appendChild(script);
-        setAttributeData({backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta})
+        // setAttributeData({backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta})
       }
     }, []);
     
-    return <>
+    return <><RecoilRoot>
     {draggable?
-    <Rnd default={{ x: x , y: y}}>
-      <div className={'chat-section '+className} style={{...style}}>
-        <Heading/>
-        <ChatArea/>
-        <Input/>
+    <Rnd default={{ x: x , y: y}} updateZIndex={999}>
+      <div style={{...chatComponentStyle}} className={"chat-and-icon-container"+chatComponentClassName}>
+        <div className={'chat-section '+chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
+          <Heading/>
+          <ChatArea/>
+          <Input/>
+        </div>
+        <div className={'chatbot-open-icon'+chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
+        </div>
       </div>
     </Rnd>:
-    <div className={'chat-section '+className} style={{...style}}>
-        <Heading/>
-        <ChatArea/>
-        <Input/>
-    </div>}
+    <div style={{...chatComponentStyle}} className={"chat-and-icon-container"+chatComponentClassName}>
+      <div className={'chat-section '+chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
+          <Heading/>
+          <ChatArea/>
+          <Input/>
+      </div>
+      <div className={'chatbot-open-icon'+chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
+      </div>
+    </div>
+    }
+    </RecoilRoot>
   </>
 }
 
@@ -76,7 +107,9 @@ export default function ChatBot({backendUrl,geminiApi,prompt,botIcon,description
 // user need to wrap this inside <RecoilRoot/> thats it and its necessary steps npm i recoil import {recoil-root} from 'recoil' <RecoilRoot>in
 // app before using this chat component
 
-//i can make its backend and allow users to hit it for their usage if they cant create one
+//i can make its backend and allow users to hit it for their usage if they cant create one, they can send the prompt with the url
+
+//avoid adding position to the chatbot through style or class it will result in abnormal behavior
 
 //todo: cook up its be and revise week11
 

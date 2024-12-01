@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import 'highlight.js/styles/github-dark.css';
 import Online from './onlineIndicator';

@@ -87,10 +87,40 @@
     justify-content: flex-end;
 
     position: relative;
-    max-width: 600px;
+    /* max-width: 600px; */
     min-width: 270px;
     width: 98%;
     height: 612px;
+}
+.chat-and-icon-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: max-content;
+    width: max-content;
+    gap: 0.6rem;
+}
+
+.chatbot-open-icon{
+    border-radius: 100%;
+    width: 3.8rem;
+    aspect-ratio: 1/1;
+    background-image: url('./logoImg.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.chatbot-open-icon:hover{
+    cursor: pointer;
+    filter: grayscale(.2);
+    transition-duration: .2s;
+    transform: rotate(2deg);
+}
+
+.collapse{
+    width: 0;
+    height: 0;
+    transition-duration: 4s;
 }
 
 .prompt-input {
