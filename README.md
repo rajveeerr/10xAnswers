@@ -200,12 +200,15 @@ POST requests are sent to backend with the following payload:
 
 ## Screenshots
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="https://github.com/user-attachments/assets/829e3679-caaa-475f-8220-c301cf21af71" alt="Screenshot 1" style="width: 49%; border-radius: 8px;">
-  <img src="https://github.com/user-attachments/assets/e02046e1-bb25-4488-aae9-6e30ee1140a0" alt="Screenshot 2" style="width: 45%; border-radius: 8px;">
-  <img src="https://github.com/user-attachments/assets/575fdab5-3f65-4b84-aaf1-a9317a73dfe0" alt="Screenshot 3" style="width: 45%; border-radius: 8px;">
-  <img src="https://github.com/user-attachments/assets/dd6b8032-3347-48ca-b7b8-efdf05e9e30a" alt="Screenshot 4" style="width: 45%; border-radius: 8px;">
-</div>
+## Screenshots
+
+| ![file (4)](https://github.com/user-attachments/assets/e63d62e0-b28b-44ca-b479-81c56e411c09) | ![Screenshot 2](https://github.com/user-attachments/assets/e02046e1-bb25-4488-aae9-6e30ee1140a0) |
+| -------------------------------------------------- | -------------------------------------------------- |
+| ![Screenshot 3](https://github.com/user-attachments/assets/575fdab5-3f65-4b84-aaf1-a9317a73dfe0) | ![Screenshot 4](https://github.com/user-attachments/assets/dd6b8032-3347-48ca-b7b8-efdf05e9e30a) |
+
+### Example Usage
+
+<img width="1280" alt="Screenshot 2024-12-02 at 3 18 29 AM" src="https://github.com/user-attachments/assets/2868acd3-dbcf-4f24-a086-7220d3c685bd">
 
 
 ## Upcoming Features
