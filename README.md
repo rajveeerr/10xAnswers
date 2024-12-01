@@ -6,6 +6,8 @@ Welcome to **10xAnswers**, a fully customizable and draggable chatbot component 
 [![License](https://img.shields.io/npm/l/10xanswers.svg)](https://github.com/yourusername/10xanswers/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/10xanswers.svg)](https://www.npmjs.com/package/10xanswers)
 
+![10xAnswers Banner](https://github.com/user-attachments/assets/64a70341-2631-4b94-a7b7-35b71f2d6363)
+
 
 # Table of Contents
 
