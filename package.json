@@ -1,29 +1,23 @@
 {
   "name": "10xanswers",
+  "description": "A fully customizable, draggable chatbot component built with React and Recoil for your next project.",
   "private": false,
-  "version": "1.0.10",
+  "version": "1.0.31",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/rajveeerr/10xAnswers.git"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
   "files": [
-    "dist",
-    "src/components/answerComponent.jsx",
-    "src/styles/chatStyle.css",
-    "src/components/chatArea.jsx",
-    "src/components/heading.jsx",
-    "src/components/inputArea.jsx",
-    "src/components/onlineIndicator.jsx",
-    "src/components/questions.jsx",
-    "src/hooks/useOnline.js",
-    "src/store/atoms/allChats.js",
-    "src/store/atoms/answerFamily.js",
-    "src/store/atoms/questionFamily.js",
-    "src/store/atoms/attributesData.js",
-    "src/store/atoms/chatWindowState.js"
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
@@ -35,27 +29,23 @@
     "watch": "vitest"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "react-markdown": "^9.0.1",
     "react-rnd": "^10.4.13",
     "react-syntax-highlighter": "^15.6.1",
     "recoil": "^0.7.7",
     "rehype-highlight": "^7.0.1",
     "remark-gfm": "^4.0.0",
+    "save-dev": "^0.0.1-security",
     "uuid": "^11.0.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.25.9",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
     "@eslint/js": "^9.13.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^0.0.0",
-    "babel-preset-react": "^6.24.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "c8": "^10.1.2",
     "css-loader": "^7.1.2",
     "dotenv": "^16.4.5",
@@ -68,10 +58,54 @@
     "react-test-renderer": "^18.3.1",
     "style-loader": "^4.0.0",
     "vite": "^5.4.10",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vitest": "^2.1.6"
   },
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "keywords": [
+    "chatbot",
+    "react chatbot",
+    "recoil chatbot",
+    "custom chatbot component",
+    "draggable chatbot",
+    "markdown chatbot",
+    "interactive chatbot",
+    "customizable chatbot",
+    "frontend chatbot",
+    "react recoil chatbot",
+    "gemini api chatbot",
+    "chatbot npm package",
+    "chatbot UI component",
+    "react state management",
+    "plug-and-play chatbot",
+    "drag-and-drop chatbot",
+    "open-source chatbot",
+    "AI chatbot component",
+    "markdown rendering chatbot",
+    "internet status hook",
+    "chatbot styling",
+    "recoil state management",
+    "react hooks chatbot",
+    "100xDevs",
+    "react",
+    "chatbot",
+    "ai",
+    "component",
+    "draggable",
+    "gemini",
+    "conversational-ui"
+],
+  "author": {
+    "name": "Rajveer Singh",
+    "email": "rajveergreets@gmail.com",
+    "url": "https://x.com/rajveeerrsingh"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/rajveeerr/10xanswers#readme",
+  "bugs": {
+    "url": "https://github.com/rajveeerr/10xanswers/issues"
   }
 }

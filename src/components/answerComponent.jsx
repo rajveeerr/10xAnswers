@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { allChats } from '../store/atoms/allChats';
 import { questionFamily } from '../store/atoms/questionFamily';
 import { answerFamily } from '../store/atoms/answerFamily';
+import '../styles.css'
 
 export default function Chat(props){
 
@@ -63,19 +64,8 @@ export default function Chat(props){
         </p>
         <div className='chat-options'>
           <span onClick={handleCopy}  className='copy chat-option'><span className='copy-icon'><i class="fa-regular fa-clipboard"></i></span>Copy</span>
-          <span className='collection chat-option'><span className='collection-icon'><i class="fa-regular fa-bookmark"></i></span>Add to Collection</span>
+          {/* <span className='collection chat-option'><span className='collection-icon'><i class="fa-regular fa-bookmark"></i></span>Add to Collection</span> */}
         </div>
       </div>
     </div>
 }
-
-// workflow=> question typed and enter is pressed from input element, this will generate an atom with an unique id which will update
-// everytime a question is entered, and the chat history is being updated with the question id, now chat area renders the chat 
-// history(which contains the question id and answer id) and renders the chat component and question component for those ids, now
-// question component simply fetch the value of atom from respective atomFamily using those ids to render them, chat coponent
-// generated a new answer id, for the question id and question received, and updated the chatHistory with the answer id mapped to
-// the respective question id, this change of chathistory array triggers the re-render of all the answer and chat components onscreen. 
-
-// edit-workflow=> when the question is edited its id remains the same, just the question changes, which re-renders this answer
-// component because the parameters passed to the answer atom family changes, a new atom is created with new id and the id for 
-// the answer in "allChats" atom is updated ofr the same question to the new id generated and thus the whole chats gets re-rendered

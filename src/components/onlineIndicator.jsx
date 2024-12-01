@@ -1,4 +1,5 @@
 import useOnline from "../hooks/useOnline"
+import '../styles.css'
 
 export default function Online(){
     let online=useOnline();

@@ -27,9 +27,10 @@ Welcome to **10xAnswers**, a fully customizable and draggable chatbot component 
 11. [Backend Integration](#backend-integration)  
     - [URL-based Integration](#url-based-integration)  
 12. [Warnings and Important Notes](#warning-and-important-notes)  
-13. [Upcoming Features](#upcoming-features)  
-14. [Author](#author)  
-15. [Contribution and Support](#contribution-and-support)  
+13. [Screenshots](#screenshots)
+14. [Upcoming Features](#upcoming-features)  
+15. [Author](#author)  
+16. [Contribution and Support](#contribution-and-support)  
 
 ## Demo
 
@@ -194,6 +195,15 @@ POST requests are sent to backend with the following payload:
 **Development Caution**: 
 - After changing any prop of the chat component, changes will only be visible after reloading.
 - Exposing Gemini API key directly in frontend is NOT recommended as it exposes your key to users.
+
+## Screenshots
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/829e3679-caaa-475f-8220-c301cf21af71" alt="Screenshot 1" style="width: 49%; border-radius: 8px;">
+  <img src="https://github.com/user-attachments/assets/e02046e1-bb25-4488-aae9-6e30ee1140a0" alt="Screenshot 2" style="width: 45%; border-radius: 8px;">
+  <img src="https://github.com/user-attachments/assets/575fdab5-3f65-4b84-aaf1-a9317a73dfe0" alt="Screenshot 3" style="width: 45%; border-radius: 8px;">
+  <img src="https://github.com/user-attachments/assets/dd6b8032-3347-48ca-b7b8-efdf05e9e30a" alt="Screenshot 4" style="width: 45%; border-radius: 8px;">
+</div>
 
 
 ## Upcoming Features

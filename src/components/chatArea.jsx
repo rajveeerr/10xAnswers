@@ -6,6 +6,7 @@ import { allChats } from '../store/atoms/allChats';
 import Question from './questions';
 import Chat from './answerComponent';
 import { chatBotAttributes } from '../store/atoms/attributesData';
+import '../styles.css'
 
 function scrollToBottom(element){
     element.scrollTop=element.scrollHeight
@@ -44,7 +45,7 @@ function HeroIntro(){
         <span className='stylize' style={stylizeTitle?null:{display:"none"}}>
           {stylizeTitle?stylizeTitle.emphasized:null}
         </span>
-        {stylizeTitle?stylizeTitle.normal:title}
+        {stylizeTitle?stylizeTitle.normal:title?title:"10xAnswers"}
       </h1>
       <h2 className='hero-sub-title'>{description||"Because your Questions should not be left un-answered."}</h2>
       <span style={{background:"rgb(44 44 44)",padding:"0.3rem 1.1rem",borderRadius:"1.6rem",margin:"1rem"}}>

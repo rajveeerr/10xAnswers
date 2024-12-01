@@ -4,12 +4,12 @@ import 'highlight.js/styles/github-dark.css';
 import { v4 as uuidv4 } from 'uuid';
 import { questionFamily } from '../store/atoms/questionFamily';
 import { allChats } from '../store/atoms/allChats';
+import '../styles.css'
 
 export default function Input(){
 
     let inputElement=useRef()
     let submitBtn=useRef()
-    // let id=useRef(1);
     let id=useRef(uuidv4());
     let setQuestion=useSetRecoilState(questionFamily(id.current))
     let [history,setChatHistory]=useRecoilState(allChats);
@@ -22,7 +22,7 @@ export default function Input(){
         if(inputElement.current.value.trim().length!=0){
           setQuestion(q=>({...q,question: inputElement.current.value}))
           setChatHistory(history=>[...history,{question:id.current,answer:null}])
-          id.current=uuidv4();//changing the id
+          id.current=uuidv4();
           inputElement.current.value="";
           submitBtn.current.classList.add("disabled")
         }
@@ -50,11 +50,11 @@ function InputOptions(){
     return <div className='input-options'>
         <div className='input-option'>
             <span className='input-option-icon'><i class="fa-regular fa-file"></i></span>
-            <p className='option-description'>Browse Prompts</p>
+            <p className='option-description'>Add Media</p>
         </div>
         <div className='input-option'>
             <span className='input-option-icon'><i class="fa-brands fa-soundcloud"></i></span>
-            <p className='option-description'>No Brand Voice</p>
+            <p className='option-description'>Voice Chat</p>
         </div>
     </div>
 }

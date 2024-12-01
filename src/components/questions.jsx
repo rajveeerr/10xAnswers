@@ -3,7 +3,8 @@ import { useRef, useState } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import 'highlight.js/styles/github-dark.css';
 import { chatBotAttributes } from "../store/atoms/attributesData";
-
+import '../styles.css'
+import { getAssetPath } from '../utils/getAssetPath';
 
 export default function Question(props){
   let {userIcon}=useRecoilValue(chatBotAttributes)
@@ -38,7 +39,7 @@ export default function Question(props){
   
   return <div className='question-container'>
     <div className='question'>
-      <span className='bot-icon'><img src={userIcon||'./logoImg.jpg'}></img></span>
+      <span className='bot-icon'><img src={userIcon||getAssetPath('logoImg.jpg')}></img></span>
       <p className='question-txt' ref={questionArea}>{currentQuestion.question}</p>
       {!editing&&<span className='edit-icon' onClick={handleEdit}><i class="fa-solid fa-pen"></i></span>}
     </div>
