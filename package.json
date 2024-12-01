@@ -2,7 +2,7 @@
   "name": "10xanswers",
   "description": "A fully customizable, draggable chatbot component built with React and Recoil for your next project.",
   "private": false,
-  "version": "1.0.31",
+  "version": "1.0.34",
   "type": "module",
   "repository": {
     "type": "git",
