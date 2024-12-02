@@ -193,13 +193,13 @@ function ChatBotWrapper({
 // second one for now -------------
 
 // LAST STREACH ------------------------------------------------->
-// documentation and package file
 // on page let users tweak the settings and have the code
 
 // figure out why extra re-rendering
 // make it persistant
 // revise week11
 // light mode? -> not now
+// documentation and package file-> done
 // now figure out a way to send history and prompt to be -> done
 // cook up its be -> done
 // npm-package out of it -> done

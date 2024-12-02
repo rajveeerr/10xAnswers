@@ -1,9 +1,11 @@
 # 10xAnswers: ChatBot Component
 
-Welcome to **10xAnswers**, a fully customizable and draggable chatbot component built with React and Recoil. This package is designed to help you integrate an intelligent chatbot into your project effortlessly, eliminating the need to create one from scratch. With support for markdown rendering, draggable components, customizable prompts, and state management, **10xAnswers** is your go-to solution for chatbot integration.
+10xAnswers is an easy-to-integrate, fully customizable, and draggable chatbot component built with React and Recoil. It allows you to add an intelligent chatbot to your project with minimal effort—no need to build one from scratch. Simply configure the prompt and provide the backend URL (or use our hosted service if you don’t want to build the backend yourself). 
+
+With 10xAnswers, you get both the frontend component and a backend solution, streamlining the process of adding a chatbot to your project. Just provide the URL and you're good to go—whether you want to build your own backend or use our hosted solution.
 
 [![npm version](https://badge.fury.io/js/10xanswers.svg)](https://badge.fury.io/js/10xanswers)
-[![License](https://img.shields.io/npm/l/10xanswers.svg)](https://github.com/yourusername/10xanswers/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/10xanswers.svg)](https://github.com/rajveeerr/10xanswers/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/10xanswers.svg)](https://www.npmjs.com/package/10xanswers)
 
 ![10xAnswers Banner](https://github.com/user-attachments/assets/64a70341-2631-4b94-a7b7-35b71f2d6363)
@@ -36,18 +38,22 @@ Welcome to **10xAnswers**, a fully customizable and draggable chatbot component 
 
 ## Demo
 
-[Live Demo Link - Coming Soon]
+[Live Demo Link - Working on this]
+
 
 ## Features
 
 - **Plug-and-Play**: Simple to install and use.
+- **Awesome UI**: The chat bot has clean modern UI, so it would look great on your project.
 - **Customizable**: Style the chat window, bot icon, and entire chat component as per your needs.
-- **Markdown Support**: Renders code snippets, tables, and more.
-- **State Optimization**: Built using React and Recoil for efficient state management.
+- **Markdown Support**: Render rich text, including code blocks and tables, in chatbot responses.
+- **Editable User Input**: Users can modify their questions and easily copy responses.
+- **State Management with Recoil**: Optimized state handling to ensure smooth performance.
 - **Connectivity Check**: Includes a custom hook to display internet connectivity status.
-- **Draggable UI**: Make the chatbot draggable for flexible placement.
+- **Draggable Interface**: Move the chatbot around the screen for an optimal user experience and flexible placement.
 - **Backend Support**: Option to use your backend or provided URL for response generation.
 - **Open Source**: Fully accessible codebase for contributions and enhancements.
+- **Future Features**: Media and voice support, as well as additional themes, are coming soon.
 
 ## Installation
 
@@ -67,10 +73,10 @@ import { ChatBot } from '10xanswers';
 
 function App() {
   return (
-    <ChatBot 
-      backendUrl="https://ask-10x-questions.vercel.app/"
-      draggable={true}
-    />
+      <ChatBot 
+        backendUrl="https://ask-10x-questions.vercel.app/" 
+        prompt="Act as an artist and answer questions in a creative and stylistic manner." 
+      />
   );
 }
 
@@ -115,8 +121,10 @@ export default App;
   description="AI-powered conversational assistant"
   cta="Start Asking"
   startOpen={true}
+  chatComponentStyle={{position:"absolute",right:0,bottom:0,margin:"1rem"}}
 />
 ```
+
 
 ## All Props
 
@@ -208,7 +216,7 @@ POST requests are sent to backend with the following payload:
 
 ### Example Usage
 
-<img width="1280" alt="Screenshot 2024-12-02 at 3 18 29 AM" src="https://github.com/user-attachments/assets/2868acd3-dbcf-4f24-a086-7220d3c685bd">
+<img width="1280" style=" border-radius: 12px;" alt="Screenshot 2024-12-02 at 3 18 29 AM" src="https://github.com/user-attachments/assets/5b066cbc-8011-466d-984a-eb8ab0cd0acc">
 
 
 ## Upcoming Features

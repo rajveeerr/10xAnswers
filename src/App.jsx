@@ -1,13 +1,11 @@
 import './App.css'
 import ChatBot from './components/chatBot'
-import { RecoilRoot } from 'recoil'
-
 
 function App() {
 
   return (
     <>
-      <ChatBot //avoid adding position to the chatbot through style or class it will result in abnormal behavior
+      <ChatBot
         chatWindowStyle={{}} 
         chatBotIconStyle={{}}
         chatComponentStyle={{position:"absolute",right:0,bottom:0,margin:"1rem"}}
@@ -28,8 +26,6 @@ function App() {
         description="Why not ask you questions?" 
         cta="Start Asking"
         startOpen={true} //set the starting state of the component, will it be open or closed, true foe open and false for close
-
-//if both url and gemini key are provided more inportance will be given to the url
       />
     </>)
 }

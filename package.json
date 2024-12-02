@@ -2,7 +2,7 @@
   "name": "10xanswers",
   "description": "A fully customizable, draggable chatbot component built with React and Recoil for your next project.",
   "private": false,
-  "version": "1.0.34",
+  "version": "1.0.36",
   "type": "module",
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "react-syntax-highlighter": "^15.6.1",
     "recoil": "^0.7.7",
     "rehype-highlight": "^7.0.1",
+    "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.0",
     "save-dev": "^0.0.1-security",
     "uuid": "^11.0.3"
@@ -46,6 +47,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "c8": "^10.1.2",
     "css-loader": "^7.1.2",
     "dotenv": "^16.4.5",
@@ -55,8 +57,10 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
     "react-test-renderer": "^18.3.1",
     "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.15",
     "vite": "^5.4.10",
     "vite-plugin-css-injected-by-js": "^3.5.2",
     "vitest": "^2.1.6"
@@ -97,7 +101,7 @@
     "draggable",
     "gemini",
     "conversational-ui"
-],
+  ],
   "author": {
     "name": "Rajveer Singh",
     "email": "rajveergreets@gmail.com",
