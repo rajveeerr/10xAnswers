@@ -111,7 +111,7 @@ export default App;
 <ChatBot 
   backendUrl="https://ask-10x-questions.vercel.app/"
   title="100xQuestions"
-  stylizeTitle={{emphasized:"100x",normal:"Questions"}}//optional
+  stylizeTitle={{emphasized:"100x",normal:"Questions"}}//this field is optional, but recommended
   botIcon="./logoImg2.jpg"
   userIcon="./logoImg.jpg"
   draggable={true}
@@ -121,7 +121,7 @@ export default App;
   description="AI-powered conversational assistant"
   cta="Start Asking"
   startOpen={true}
-  chatComponentStyle={{position:"absolute",right:0,bottom:0,margin:"1rem"}}
+  chatWindowStyle={{backgroundColor: #090909}}//if you want to change the background color, you can simply do it in the window
 />
 ```
 
@@ -205,6 +205,9 @@ POST requests are sent to backend with the following payload:
 **Development Caution**: 
 - After changing any prop of the chat component, changes will only be visible after reloading.
 - Exposing Gemini API key directly in frontend is NOT recommended as it exposes your key to users.
+- Since the z-index of chatbot component is set to 999, it might give some troubles while building your site, you can change the z-ndex of component by applying styles in the chatComponent coinatiner.
+Example: 
+```jsx <ChatBot chatComponentStyle={{zIndex:1}}/>```
 
 ## Screenshots
 

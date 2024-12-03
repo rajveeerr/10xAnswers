@@ -22,8 +22,8 @@ function ChatBotWrapper({
     geminiApi,
     prompt,
     draggable,
-    x,
-    y,
+    x=600,
+    y=700,
     title,
     stylizeTitle,
     description,
@@ -50,21 +50,24 @@ function ChatBotWrapper({
         script.id = "font-awesome-script";
         script.crossOrigin = "anonymous";
         document.body.appendChild(script);
-        setAttributeData({backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta})
+        
         setWindowOpen(startOpen?true:false)
       }
     }, []);
+    useEffect(()=>{
+      setAttributeData({backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta,})
+    },[backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta])
     
     return <>
     {draggable?
     <Rnd default={{ x: x , y: y}}>
-      <div style={{...chatComponentStyle}} className={"chat-and-icon-container"+chatComponentClassName}>
+      <div style={{...chatComponentStyle}} className={"chat-and-icon-container "+ chatComponentClassName}>
         <div className={'chat-section '+chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
             <Heading/>
             <ChatArea/>
             <Input/>
         </div>
-        <div className={'chatbot-open-icon'+chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
+        <div className={'chatbot-open-icon '+chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
           <span><i class="fa-solid fa-robot"></i></span>
         </div>
     </div>
@@ -193,11 +196,12 @@ function ChatBotWrapper({
 // second one for now -------------
 
 // LAST STREACH ------------------------------------------------->
-// on page let users tweak the settings and have the code
+// on homepage let users tweak the settings and have the code
+// make it persistant 
 
 // figure out why extra re-rendering
-// make it persistant
 // revise week11
+
 // light mode? -> not now
 // documentation and package file-> done
 // now figure out a way to send history and prompt to be -> done

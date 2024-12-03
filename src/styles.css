@@ -79,7 +79,7 @@
     padding: .6rem;
     background-color: #fff;
     background-color: var(--chat-background);
-    margin: 1rem;
+    /* margin: 1rem; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,8 +103,8 @@
     max-width: 600px;
     right: 0;
     bottom: 0vh;
-    gap: 0;
-    margin: 1rem;
+    gap: .8rem;
+    margin: .4rem;
 }
 
 .chatbot-open-icon{
@@ -146,7 +146,7 @@
 .prompt-input {
     display: flex;
     flex-grow: 1;
-    height: 4rem;
+    height: 5rem;
     border-radius: 1.6rem;
     font-size: 1rem;
     background-color: var(--textarea-background);

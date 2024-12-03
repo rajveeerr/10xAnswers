@@ -33,6 +33,16 @@ export default function ChatArea(){
   
 function HeroIntro(){
   let {title,stylizeTitle,description,cta}=useRecoilValue(chatBotAttributes)
+  
+  let emphasizedTitle=null
+  let normalTitle=null
+  try{
+    emphasizedTitle=stylizeTitle.emphasized
+    normalTitle=stylizeTitle.normal
+  }
+  catch(e){
+    null
+  }
 
     return<div className='hero-section'>
       <div className='floating-icons'>
@@ -42,14 +52,14 @@ function HeroIntro(){
         <span className='icon backward backward-second'><i class="fa-solid fa-sitemap"></i></span>
       </div>
       <h1 className='hero-title'>
-        <span className='stylize' style={stylizeTitle?null:{display:"none"}}>
-          {stylizeTitle?stylizeTitle.emphasized:null}
+        <span className='stylize' style={emphasizedTitle?{}:{display:"none"}}>
+          {emphasizedTitle?stylizeTitle.emphasized:"10x"}
         </span>
-        {stylizeTitle?stylizeTitle.normal:title?title:"10xAnswers"}
+        {normalTitle?normalTitle:title?title:"10xAnswers"}
       </h1>
       <h2 className='hero-sub-title'>{description||"Because your Questions should not be left un-answered."}</h2>
       <span style={{background:"rgb(44 44 44)",padding:"0.3rem 1.1rem",borderRadius:"1.6rem",margin:"1rem"}}>
-        <p className='hero-description'>{cta||"Start Asking you Burning Questions"}</p>
+        <p className='hero-description'>{cta||"Start Asking your Burning Questions"}</p>
       </span>
     </div>
 }
