@@ -72,7 +72,7 @@ function ChatBotWrapper({
         </div>
     </div>
     </Rnd>:
-    <div style={{...chatComponentStyle}} className={"chat-and-icon-container "+ chatComponentClassName}>
+    <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container "+ chatComponentClassName}>
       <div className={'chat-section '+ chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
           <Heading/>
           <ChatArea/>
