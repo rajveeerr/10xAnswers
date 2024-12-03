@@ -38,7 +38,7 @@ With 10xAnswers, you get both the frontend component and a backend solution, str
 
 ## Demo
 
-Live Demo and Customization Link: https://10x-answers.vercel.app/
+See Live Demo and Customization: https://10x-answers.vercel.app/
 
 
 ## Features

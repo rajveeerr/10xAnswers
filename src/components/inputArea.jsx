@@ -33,7 +33,7 @@ export default function Input(){
       if(inputElement.current.value!=""){
         setQuestion(q=>({...q,question: inputElement.current.value}))
         setChatHistory(history=>[...history,{question:id.current,answer:null}])
-        id.current=uuidv4;
+        id.current=uuidv4();
         inputElement.current.value="";
         submitBtn.current.classList.add("disabled")
       }
