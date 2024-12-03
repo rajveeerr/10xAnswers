@@ -75,7 +75,7 @@ export let answerFamily=atomFamily({
         return {
             id,
             question,
-            userIcon:botIcon||getAssetPath('logoImg2.jpg'),
+            userIcon:botIcon||'/node_modules/10xanswers/dist/logoImg2.jpg',
             answer:data.candidates[0].content.parts[0].text
         }
       }

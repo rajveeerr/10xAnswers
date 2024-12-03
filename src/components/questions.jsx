@@ -39,7 +39,7 @@ export default function Question(props){
   
   return <div className='question-container'>
     <div className='question'>
-      <span className='bot-icon'><img src={userIcon||getAssetPath('logoImg.jpg')}></img></span>
+      <span className='bot-icon'><img src={userIcon||'/node_modules/10xanswers/dist/logoImg.jpg'}></img></span>
       <p className='question-txt' ref={questionArea}>{currentQuestion.question}</p>
       {!editing&&<span className='edit-icon' onClick={handleEdit}><i class="fa-solid fa-pen"></i></span>}
     </div>
