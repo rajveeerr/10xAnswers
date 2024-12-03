@@ -38,7 +38,17 @@ With 10xAnswers, you get both the frontend component and a backend solution, str
 
 ## Demo
 
-See Live Demo and Customization: https://10x-answers.vercel.app/
+<img width="1280" alt="Screenshot 2024-12-03 at 12 19 56 PM" src="https://github.com/user-attachments/assets/ba42422f-bdae-448a-b7aa-43ee4cc4ac8f">
+
+<img width="1280" alt="Screenshot 2024-12-03 at 12 20 55 PM" src="https://github.com/user-attachments/assets/1a3f142b-9439-4578-86e9-a5156a70ca0f">
+
+# See Live Demo and Customization:
+
+You can see the 10xAnswers chatbot in action, customize its appearance, behavior, and features, and even get the exact code to integrate it into your own website!
+
+Visit the demo and customization page at: https://10x-answers.vercel.app/
+Try adjusting the settings to see how the chatbot reacts to different configurations.
+After customizing the chatbot, you can copy the generated code and implement it directly into your project to use the same customized bot on your website.
 
 
 ## Features
