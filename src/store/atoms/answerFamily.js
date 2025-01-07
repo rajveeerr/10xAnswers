@@ -1,6 +1,5 @@
 import { atomFamily, selectorFamily, useRecoilValue } from 'recoil'
 import { chatBotAttributes } from './attributesData';
-import { getAssetPath } from '../../utils/getAssetPath';
 
 let historyPrompts=[]
 

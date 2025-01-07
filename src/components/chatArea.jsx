@@ -6,7 +6,7 @@ import { allChats } from '../store/atoms/allChats';
 import Question from './questions';
 import Chat from './answerComponent';
 import { chatBotAttributes } from '../store/atoms/attributesData';
-import '../styles.css'
+import '../styles/style.css'
 
 function scrollToBottom(element){
     element.scrollTop=element.scrollHeight

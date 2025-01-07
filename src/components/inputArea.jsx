@@ -4,7 +4,7 @@ import 'highlight.js/styles/github-dark.css';
 import { v4 as uuidv4 } from 'uuid';
 import { questionFamily } from '../store/atoms/questionFamily';
 import { allChats } from '../store/atoms/allChats';
-import '../styles.css'
+import '../styles/style.css'
 
 export default function Input(){
 
@@ -13,7 +13,8 @@ export default function Input(){
     let id=useRef(uuidv4());
     let setQuestion=useSetRecoilState(questionFamily(id.current))
     let [history,setChatHistory]=useRecoilState(allChats);
-    //have to figure out why this code is breaking whe useSetRecoilState is used
+    // have to figure out why this code is breaking whe useSetRecoilState is used, because there's no re-rendering is
+    // happening in this causing overall no, change in id leading it to breaking
     
     function handleKeyDown(event){
       inputElement.current.value.trim().length!=0?submitBtn.current.classList.remove("disabled"):submitBtn.current.classList.add("disabled")
