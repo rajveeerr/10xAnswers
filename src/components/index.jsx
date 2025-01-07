@@ -62,7 +62,7 @@ function ChatBotWrapper({
     return <>
     {draggable?
     <Rnd default={{ x: x , y: y}}>
-      <div style={open?null:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
+      <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
         <div className={'chat-section transition-all'+ chatWindowClassName} style={open?{...chatWindowStyle}:{width:0,height:0,opacity:0,display:"none"}}>
             <Heading setWindowState={setWindowOpen}/>
             <ChatArea/>
@@ -73,7 +73,7 @@ function ChatBotWrapper({
         </div>}
     </div>
     </Rnd>:
-    <div style={open?null:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
+    <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
       <div className={'chat-section transition-all'+ chatWindowClassName} style={open?{...chatWindowStyle}:{width:0,height:0,display:"none"}}>
           <Heading setWindowState={setWindowOpen}/>
           <ChatArea/>
