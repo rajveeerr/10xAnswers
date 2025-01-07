@@ -62,15 +62,15 @@ function ChatBotWrapper({
     return <>
     {draggable?
     <Rnd default={{ x: x , y: y}}>
-      <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
-        <div className={'chat-section transition-all'+ chatWindowClassName} style={open?{...chatWindowStyle}:{width:0,height:0,opacity:0,display:"none"}}>
-            <Heading setWindowState={setWindowOpen}/>
+      <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container "+ chatComponentClassName}>
+        <div className={'chat-section '+ chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
+            <Heading/>
             <ChatArea/>
             <Input/>
         </div>
-        {!open&&<div className={'chatbot-open-icon '+ chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
+        <div className={'chatbot-open-icon '+ chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
           <span><i class="fa-solid fa-robot"></i></span>
-        </div>}
+        </div>
     </div>
     </Rnd>:
     <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>

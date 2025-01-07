@@ -21,7 +21,7 @@ function App() {
           backendUrl="https://ask-10x-questions.vercel.app/" 
           // title="Why Ask?"
           // prompt="You are an artist" 
-          draggable={true} 
+          draggable={false} 
           // description="Why not ask you questions?" 
           cta="Start Asking"
           startOpen={true}
