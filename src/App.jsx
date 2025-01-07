@@ -1,12 +1,10 @@
-import './App.css'
-import {ChatBot} from './components/chatBot'
-
+import ChatBot from './components';
 
 function App() {
 
   return (
-    <>
-       <ChatBot //avoid adding position to the chatbot through style or class it will result in abnormal behavior
+    <div style={{width:"100vw",height:"100vh"}}>
+        <ChatBot //avoid adding position to the chatbot through style or class it will result in abnormal behavior
           chatWindowStyle={{backgroundColor:"rgb(11 10 10)"}} 
           chatComponentStyle={{maxHeight:"580px",height:"auto",width:"400px",margin:0}}    
           chatComponentClassName="static md:absolute"
@@ -24,7 +22,7 @@ function App() {
           cta="Start Asking"
           startOpen={true}
         /> 
-    </>)
+    </div>)
 }
 
 export default App;

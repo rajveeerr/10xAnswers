@@ -3,8 +3,7 @@ import { useRef, useState } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import 'highlight.js/styles/github-dark.css';
 import { chatBotAttributes } from "../store/atoms/attributesData";
-import '../styles.css'
-import { getAssetPath } from '../utils/getAssetPath';
+import '../styles/style.css'
 
 export default function Question(props){
   let {userIcon}=useRecoilValue(chatBotAttributes)

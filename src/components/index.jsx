@@ -1,4 +1,4 @@
-import '../styles.css'
+import '../styles/style.css'
 import 'highlight.js/styles/github-dark.css';
 import Input from './inputArea';
 import ChatArea from './chatArea';
@@ -22,8 +22,8 @@ function ChatBotWrapper({
     geminiApi,
     prompt,
     draggable,
-    x=600,
-    y=700,
+    x=100,
+    y=100,
     title,
     stylizeTitle,
     description,
@@ -54,6 +54,7 @@ function ChatBotWrapper({
         setWindowOpen(startOpen?true:false)
       }
     }, []);
+    
     useEffect(()=>{
       setAttributeData({backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta,})
     },[backendUrl,geminiApi,title,prompt,botIcon,userIcon,stylizeTitle,description,cta])
@@ -61,26 +62,26 @@ function ChatBotWrapper({
     return <>
     {draggable?
     <Rnd default={{ x: x , y: y}}>
-      <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container "+ chatComponentClassName}>
-        <div className={'chat-section '+ chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
-            <Heading/>
+      <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
+        <div className={'chat-section transition-all'+ chatWindowClassName} style={open?{...chatWindowStyle}:{width:0,height:0,opacity:0,display:"none"}}>
+            <Heading setWindowState={setWindowOpen}/>
             <ChatArea/>
             <Input/>
         </div>
-        <div className={'chatbot-open-icon '+ chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
+        {!open&&<div className={'chatbot-open-icon '+ chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
           <span><i class="fa-solid fa-robot"></i></span>
-        </div>
+        </div>}
     </div>
     </Rnd>:
-    <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container "+ chatComponentClassName}>
-      <div className={'chat-section '+ chatWindowClassName} style={open?{...chatWindowStyle,transitionDuration:".4s"}:{width:0,height:0,opacity:0,display:"none",transitionDuration:".4s"}}>
-          <Heading/>
+    <div style={open?{...chatComponentStyle}:{height:"min-content",width:"min-content"}} className={"chat-and-icon-container transition-all "+ chatComponentClassName}>
+      <div className={'chat-section transition-all'+ chatWindowClassName} style={open?{...chatWindowStyle}:{width:0,height:0,display:"none"}}>
+          <Heading setWindowState={setWindowOpen}/>
           <ChatArea/>
           <Input/>
       </div>
-      <div className={'chatbot-open-icon '+ chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
+      {!open&&<div className={'chatbot-open-icon '+ chatBotIconClassName} style={{...chatBotIconStyle}} onClick={()=>setWindowOpen(!open)}>
         <span><i class="fa-solid fa-robot"></i></span>
-      </div>
+      </div>}
     </div>
     }
   </>

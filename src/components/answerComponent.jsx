@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { allChats } from '../store/atoms/allChats';
 import { questionFamily } from '../store/atoms/questionFamily';
 import { answerFamily } from '../store/atoms/answerFamily';
-import '../styles.css'
+import '../styles/style.css'
 
 export default function Chat(props){
 

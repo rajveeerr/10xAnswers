@@ -79,7 +79,7 @@
     padding: .6rem;
     background-color: #fff;
     background-color: var(--chat-background);
-    /* margin: 1rem; */
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,21 +90,16 @@
     height: 100%;
     min-width: 270px;
     min-height: 300px;
-    /* max-width: 600px; */
 }
 .chat-and-icon-container{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    position: absolute;
     height: 630px;
     width: 350px;
     max-width: 600px;
-    right: 0;
-    bottom: 0vh;
     gap: .8rem;
-    margin: .4rem;
 }
 
 .chatbot-open-icon{
