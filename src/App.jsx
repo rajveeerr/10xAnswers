@@ -1,5 +1,5 @@
-import './App.css'
-import ChatBot from './components/chatBot';
+import './index.css'
+// import ChatBot from './components/chatBot';
 
 
 import ChatBot from './components';
@@ -26,7 +26,6 @@ function App() {
           cta="Start Asking"
           startOpen={true}
         /> 
-    </div>)
     </div>)
 }
 
