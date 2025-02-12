@@ -259,6 +259,27 @@
     overflow-x: hidden;
     text-align: center;
     z-index: 998;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.chat-area::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.chat-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.chat-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .chat-component-heading {
@@ -296,6 +317,7 @@
     background: linear-gradient(294deg, rgba(240, 250, 249, 0.8477984943977591) 0%, rgba(231, 255, 253, 1) 100%);
     background: var(--chat-gradient);
     flex-grow: 1;
+    width: 100%;
 }
 
 .user-icon img {
@@ -310,7 +332,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-x: scroll;
 }
 
 .chat-content {
@@ -361,6 +382,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    width: 100%;
 }
 
 .question {
@@ -370,6 +392,7 @@
     /* background: transparent; */
     align-items: center;
     /* flex-grow: 1; */
+    width: 100%;
 }
 
 .bot-icon img {
