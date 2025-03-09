@@ -18,6 +18,16 @@ export default function Input(){
     
     function handleKeyDown(event){
       inputElement.current.value.trim().length!=0?submitBtn.current.classList.remove("disabled"):submitBtn.current.classList.add("disabled")
+      if (event.key === 'shiftKey') {
+        event.preventDefault()
+        if(inputElement.current.value.trim().length!=0){
+          setQuestion(q=>({...q,question: inputElement.current.value}))
+          setChatHistory(history=>[...history,{question:id.current,answer:null}])
+          id.current=uuidv4();
+          inputElement.current.value="";
+          submitBtn.current.classList.add("disabled")
+        }
+      }
       if (event.key === 'Enter') {
         event.preventDefault()
         if(inputElement.current.value.trim().length!=0){
