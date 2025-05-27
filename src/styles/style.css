@@ -90,6 +90,7 @@
     height: 100%;
     min-width: 270px;
     min-height: 300px;
+    z-index: 9998;
 }
 .chat-and-icon-container{
     display: flex;
@@ -296,7 +297,8 @@
     border-top-right-radius: inherit;
     padding: .8rem 2rem;
     display: flex;
-    z-index: 999;
+    justify-content: space-between;
+    z-index: 9999;
     background: var(--text);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
