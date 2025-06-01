@@ -95,6 +95,71 @@ export default App;
 
 **Important**: The provided URL `https://ask-10x-questions.vercel.app/` is a pre-configured backend that works seamlessly with the 10xAnswers component. 
 
+## ⚠️ React 19 Incompatibility (Important)
+
+**❌ 10xAnswers (v1.1.14 and earlier) is NOT compatible with React 19**
+
+This is due to its dependency on **Recoil v0.7.7**, which is built for **React 18** and hasn't been updated to support React 19's internal changes.
+
+Attempting to use 10xAnswers with React 19 may cause errors like:
+
+```
+Uncaught TypeError: Cannot read properties of undefined (reading 'ReactCurrentDispatcher')
+```
+
+---
+
+## ✅ Recommended Workaround: Use React 18
+
+To avoid compatibility issues, use **React 18.x** with 10xAnswers.
+
+If you've already set up your project with React 19, you can **downgrade to React 18** by following these steps:
+
+---
+
+### 1. Modify `package.json`
+
+Update the dependencies section as follows:
+
+```json
+{
+  "dependencies": {
+    "10xanswers": "^1.1.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  }
+}
+```
+
+> 💡 You can also use any other stable React 18 version, like `^18.3.1`.
+
+---
+
+### 2. Reinstall Dependencies
+
+Install everything again using your package manager:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+---
+
+## Ongoing Improvement (Migrating to Zustand)
+
+I’m currently **overhauling the state management solution**, shifting away from Recoil to **Zustand**, which is fully compatible with React 19. Once complete, 10xAnswers will work seamlessly with the latest React release.
+
+> ⭐ **Want to help?**
+> I welcome any contributions toward this migration!
+
 ## Props
 
 ### Basic Props
