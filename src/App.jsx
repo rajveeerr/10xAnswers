@@ -13,7 +13,7 @@ function App() {
           chatComponentStyle={{maxHeight:"580px",height:"auto",width:"390px",margin:0}}    
           chatComponentClassName="static md:absolute"
           stylizeTitle={{emphasized:"10x",normal:"Answers"}}//if emphasized title and title both are given priority will be given to emp title
-          geminiApi="AIzaSyDpdTZc3GzpvmAfjwfwE14BoQaTu4QmMo0"
+          geminiApi={import.meta.env.VITE_GEMINI_API_KEY}
           // x={500} 
           // y={625} 
           backendUrl="https://ask-10x-questions.vercel.app/" 

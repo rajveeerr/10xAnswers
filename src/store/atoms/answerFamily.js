@@ -12,7 +12,7 @@ export let answerFamily=atomFamily({
       return async({get})=>{
         let {backendUrl,geminiApi,prompt,botIcon}=get(chatBotAttributes)
 
-        let url=backendUrl||"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key="+geminiApi;
+        let url=backendUrl||"https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key="+geminiApi;
 
         historyPrompts.push({role:"user",message:question})
         let chatHistory = historyPrompts.map((chat) => `${chat.role}: ${chat.message}`).join(', ');
