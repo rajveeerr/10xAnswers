@@ -8,6 +8,8 @@ With 10xAnswers, you get both the frontend component and a backend solution, str
 [![License](https://img.shields.io/npm/l/10xanswers.svg)](https://github.com/rajveeerr/10xanswers/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/npm/dm/10xanswers.svg)](https://www.npmjs.com/package/10xanswers)
 
+**Write-up:** [How 10xAnswers works, by Rajveer Singh](https://rajveers.com/projects/10xanswers)
+
 ![10xAnswers Banner](https://github.com/user-attachments/assets/64a70341-2631-4b94-a7b7-35b71f2d6363)
 
 

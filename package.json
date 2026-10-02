@@ -2,7 +2,7 @@
   "name": "10xanswers",
   "description": "A fully customizable, draggable chatbot component built with React and Recoil for your next project.",
   "private": false,
-  "version": "1.1.17",
+  "version": "1.1.18",
   "type": "module",
   "repository": {
     "type": "git",
@@ -103,7 +103,7 @@
   "author": {
     "name": "Rajveer Singh",
     "email": "rajveergreets@gmail.com",
-    "url": "https://x.com/rajveeerrsingh"
+    "url": "https://rajveers.com"
   },
   "license": "MIT",
   "homepage": "https://github.com/rajveeerr/10xanswers#readme",
